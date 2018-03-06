@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Formulario</title>
+	<meta name="author" content="Santiago Rengifo">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+</head>
+<body onload="cargarControlInicio()">
+
+	<div class="cuerpo container-fluid">
+		<div class="carta">
+			<div class="">
+			  <header>
+			  <h1>GamesGoal</h1>
+			  <h3>IDENTIFICARSE</h3>
+			  </header>
+			  <form  class="formLog">
+			    <div class="form-group">
+			      <label for="email">Correo</label>
+			      <input type="email" class="form-control name"  id="correo" required id="email" placeholder="Escribe tu correo" >
+			    </div>
+			    <div class="form-group">
+			      <label for="pwd">Contraseña:</label>
+			      <input type="password" required class="form-control pass" id="contra"  placeholder="Escribe la constraseña">
+			      <span class='alerta'></span><br>
+			    </div>
+			  </form>
+				<div class="botones">
+			    	<button class='btn btn-primary' id="login">Iniciar Sesion</button>
+					<button class="registro btn btn-danger " >Registrarme</button>
+					<button class="btn btn-outline-primary" id="google-log">Iniciar sesion: <img src="../img/iconos/google-log.png"></button>
+					<button class="inicio btn btn-success">Volver al inicio</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<!-- Menu -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="display: none;">
+	 </button>
+	<!-- Button trigger modal -->
+		<div class="modal fade" id="myModal">
+		    <div class="modal-dialog modal-sm">
+		      <div class="modal-content">
+		      
+		        <!-- Modal Header -->
+		        <div class="modal-header">
+		          <h4 class="modal-title">Oops</h4>
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        </div>
+		        
+		        <!-- Modal body -->
+		        <div class="modal-body">
+		        </div>
+		        
+		        <!-- Modal footer -->
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-primary" data-dismiss="modal">Vale</button>
+		        </div>
+		        
+		      </div>
+		    </div>
+		</div>
+
+		<!--Modal-->
+
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/dom.js"></script>
+	<script type="text/javascript" src="js/ControlCookies.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+	<script type="text/javascript" src="js/ControlFireBase.js"></script>
+	<script type="text/javascript" src="js/ControlLogin.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+
+</body>
+</html>

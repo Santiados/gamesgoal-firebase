@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registro</title>
+	<meta name="author" content="Santiago Rengifo">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+</head>
+<body onload="cargarMedianteDOM()">
+
+	<div class="container-fluid cuerpo">
+		<div class="contReg" >
+				<h1>GamesGoal</h1>
+				<h3>REGISTRO</h3>
+				<form  class='formReg row'>
+					<div class="personales entradas form-group" >
+						<label>Introduce nombre y primer apellido *: </label>
+						<input type="text" pattern="(([A-Za-z]{3,15}\s[A-Za-z]{3,15})$){1}" required class="name form-control" placeholder="Ej: Lock Eres" dt="entrada" target="nombre"><br>
+						<label>Introduce tu correo electronico *: </label>
+						<input type="email" required  class="email form-control" placeholder="example@qw.com" dt="entrada" target="correo" id="email"><br>
+						<label>Contraseña *: </label>
+						<input type="password" required class='pass form-control'  dt="entrada" target="pass1"><span class='alerta'></span><br>
+						<label>Confirmacion de contraseña *: </label>
+						<input type="password" required class="pass2 form-control" dt="entrada" target="pass2"> <span class='alerta2'></span>
+					</div>
+					<div class="detalles entradas form-group" >
+						<label>Sexo</label>
+						<select class="form-control" dt="entrada" target="genero">
+							<optgroup label="Seleccione sexo" >
+							<option selected="selected" label="Selecione"></option>
+							<option>Femenino</option>
+							<option>Masculino</option>
+							</optgroup>
+						</select>
+						<br>
+						<div class='cajaNacimiento'>
+							<label>¿Desea dar su fecha de nacimiento?</label>
+							<input type="checkbox" class='check'><br>
+							<div class='nacimiento form-group'>
+								<label>Fecha de nacimiento: </label>
+								<input type="date" min='1900-01-01' class='date form-control' dt="entrada" target="nacimiento">
+							</div>
+						</div>
+						<br>
+						<label>Direccion: </label>
+						<input type="text" class='dir form-control' placeholder="Calle,Avenida..." dt="entrada" target="direccion"><br>
+						<label>Pais: </label>
+						<select class='pais form-control' dt="entrada" target="pais">
+							<option></option>
+						</select><br>
+						<div class='divTarjeta'>
+							<label>Numero de tarjeta de credito: </label><br>
+							<input type="number" class='tarjetaCredito form-control' dt="entrada" target="numTarjeta">
+						</div>
+						<br>
+						<div>
+							<label>¿Desea recibir novedades?</label>
+							<input type="checkbox" class='novedades' dt="entrada" target="novedades"><br>
+							<label>¿Desea suscribirse a nuestra revista virtual?</label>
+							<input type="checkbox" class='revista' dt="entrada" target="revista">
+						</div>
+					</div>
+					<div class="entradas">
+					Los campos marcados con un asterisco (*) son obligatorios
+					<input type="submit" class='send btn btn-danger' value="Registrarme" id="registro"><br><br><br>
+					<input type="reset" class='btn btn-outline-dark' value="Borrar">
+					</div>	
+				</form>
+				<button class="btn btn-success" id="inicio">Quiero volver al login</button>
+		</div>
+	</div>
+	<!-- Modal -->
+	<!-- Menu -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="display: none;">
+	 </button>
+	<!-- Button trigger modal -->
+		<div class="modal fade" id="myModal">
+		    <div class="modal-dialog modal-sm">
+		      <div class="modal-content">
+		      
+		        <!-- Modal Header -->
+		        <div class="modal-header">
+		          <h4 class="modal-title">Oops</h4>
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        </div>
+		        
+		        <!-- Modal body -->
+		        <div class="modal-body">
+		        </div>
+		        
+		        <!-- Modal footer -->
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-primary" data-dismiss="modal">Vale</button>
+		        </div>
+		        
+		      </div>
+		    </div>
+		</div>
+
+		<!--Modal-->
+	<script src="../../js/jquery-3.3.1.min.js"></script>
+	<script src="../../js/bootstrap/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script type="text/javascript" src="../../js/dom.js"></script>
+	<script type="text/javascript" src="../js/sha.js"></script>
+	<script type="text/javascript" src="../js/ControlCookies.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+	<script type="text/javascript" src="../js/ControlFireBase.js"></script>
+	<script src="../js/ControlRegistro.js"></script>
+</body>
+</html>

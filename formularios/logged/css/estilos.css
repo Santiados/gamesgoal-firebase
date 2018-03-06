@@ -1,0 +1,40 @@
+body {
+	background: #E6E2E2;
+	border-top: 3px solid cyan;
+}
+
+div {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+div.cuerpo {
+	margin: 5pc auto;
+	width: 80%;
+	border-radius: 5px;
+	max-width: 500px;
+	text-align: center;
+}
+
+div.carta {
+	text-align: center;
+}
+
+span {
+	color:green;
+}
+
+
+div.carta p::first-letter {
+	text-transform: uppercase;
+}
+
+div.carta button {
+	margin: 10px 0px;
+}
+
+div.carta img {
+	width: 50%;
+	height: 50%;
+	border-radius: 5px;
+	border:1px solid grey;
+}
