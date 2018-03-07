@@ -24,7 +24,6 @@
 <br> 1.3 Imprime la información guardada en las cookies.
 
 2. **ControlLogin.js**
-
 <br><br> 2.1 Recoge los datos del formulario de login y los compara con los usuarios en la base de datos de usuarios con la función **signInWithEmailAndPassword**.
 <br><br> 2.2 Si el proceso de autenticación mediante **email** es correcto, obtiene el usuario que tenga el email para generar un usuario mediante la función **getUserByEmail**. Esta última recupera el usuario y se lo para a la función **guardarDatosEnCookies** para guardarlo como usuario temporal y no volver a acceder a la base de datos.
 <br><br> 2.3 La función **loginG** establece una conexión con **Google** para obtener los datos del usuario y la función **listenerGoogleAuth** se encuentra a la escucha del usuario resultante, si se concede el acceso, se guarda el objeto usuario recibido y se guarda de nuevo con la función **guardarDatosEnCookies**.
