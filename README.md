@@ -3,13 +3,14 @@
 
 **En vez de usar WebStorage se utilizado la propia base de datos de firebase para guardar la información de los usuarios**.
 
+**Usuarios de acceso como ejemplos:**
+1. example@qw.com --- loopback1.
+2. example2@qw.com --- Contraseña:3.
+
 ## Consola de Firebase
 
-**Usuarios de acceso como ejemplos:**
-1. example@qw.com --- loopback1
-2. example2@qw.com --- Contraseña:3
-<br>
-* Se ha creado el proyecto **GamesGoal** desde la consola de firebase
+
+* Se ha creado el proyecto **GamesGoal** desde la consola de firebase.
 * Se ha concecido permisos de autenticación en la seccion **auth**, **métodos de acceso** y se han activado las pestañas de **correo** y **google**.
 * Se ha añadidio el dominio **santiados.github.io** para que la aplicación de permisos de acceso al repositorio.
 
