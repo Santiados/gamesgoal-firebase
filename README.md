@@ -1,3 +1,43 @@
+
+# Firebase
+
+**En vez de usar WebStorage se utilizado la propia base de datos de firebase para guardar la información de la base de datos**.
+
+## Consola de Firebase
+
+**Usuarios de acceso como ejemplos:**
+1. example@qw.com --- loopback1
+2. example2@qw.com --- Contraseña:3
+
+* Se ha creado el proyecto **GamesGoal** desde la consola de firebase
+* Se ha concecido permisos de autenticación en la seccion **auth**, **métodos de acceso** y se han activado las pestañas de **correo** y **google**.
+* Se ha añadidio el dominio **santiados.github.io** para que la aplicación de permisos de acceso al repositorio.
+
+## Control de usuarios
+**Nota: Existen 4 ficheros javascript que gestionan a los usuarios. Ubicados en formularios/js**
+
+1. **ControlFirebase.js**: 
+<br> 1.1 Establece la conexión con **Firebase**.
+<br> 1.2 Gestiona los datos obtenidos de la cuenta de **google**.
+<br> 1.3 Imprime la información guardada en las cookies.
+
+2. **ControlLogin.js**
+**Nota: Se ha creado con antelación usuario por defecto para realizar la comprobación de inicio mediante email**.
+<br> 2.1 Recoge los datos del formulario de login y los compara con los usuarios en la base de datos de usuarios con la función **signInWithEmailAndPassword**.
+<br> 2.2 Si el proceso de autenticación mediante **email** es correcto, obtiene el usuario que tenga el email para generar un usuario mediante la función **getUserByEmail**. Esta última recupera el usuario y se lo para a la función **guardarDatosEnCookies** para guardarlo como usuario temporal y no volver a acceder a la base de datos.
+<br> 2.3 La función **loginG** establece una conexión con **Google** para obtener los datos del usuario y la función **listenerGoogleAuth** se encuentra a la escucha del usuario resultante, si se concede el acceso, se guarda el objeto usuario recibido y se guarda de nuevo con la función **guardarDatosEnCookies**.
+
+3. **ControlRegistro.js**
+<br> 3.1 El proceso de registro es simple, se verifica que los campos obligatorios estén rellenos para enviar los datos como un **objeto**, mediante la función **registrar** que contiene la siguiente sentencia: **firebase.database().ref('usuarios/' + longUsuarios).set(datosUsuario)** .
+La anterior sentencia consulta la longitud del array de usuarios en la base de datos para indicar que **id** tendrá el nuevo usuario. Tras ello simplemente se recupera el usuario mediante **getUserByEmail** y se guarda en **cookies**.
+
+4. **ControlCookies.js** 
+<br> 4.1 Contiene las funciones de **setCookie** y **getCookie**.
+<br> 4.2 Ademas contiene la función **logged** para indicar el nombre del usuario conectado y evitar el cuadro de **cookie**.
+
+
+
+
 # Genearación de productos con peticiones AJAX
 	
 ## Utilización
