@@ -15,8 +15,8 @@
 * Se ha añadidio el dominio **santiados.github.io** para que la aplicación de permisos de acceso al repositorio.
 
 ## Control de usuarios
-<br>
-**Nota: Existen 4 ficheros javascript que gestionan a los usuarios. Ubicados en formularios/js**
+
+### **Nota: Existen 4 ficheros javascript que gestionan a los usuarios. Ubicados en formularios/js**
 
 1. **ControlFirebase.js**: 
 <br> 1.1 Establece la conexión con **Firebase**.
@@ -24,7 +24,8 @@
 <br> 1.3 Imprime la información guardada en las cookies.
 
 2. **ControlLogin.js**
-**Nota: Se ha creado con antelación usuario por defecto para realizar la comprobación de inicio mediante email**.
+
+### **Nota: Se ha creado con antelación usuario por defecto para realizar la comprobación de inicio mediante email**.
 <br><br> 2.1 Recoge los datos del formulario de login y los compara con los usuarios en la base de datos de usuarios con la función **signInWithEmailAndPassword**.
 <br><br> 2.2 Si el proceso de autenticación mediante **email** es correcto, obtiene el usuario que tenga el email para generar un usuario mediante la función **getUserByEmail**. Esta última recupera el usuario y se lo para a la función **guardarDatosEnCookies** para guardarlo como usuario temporal y no volver a acceder a la base de datos.
 <br><br> 2.3 La función **loginG** establece una conexión con **Google** para obtener los datos del usuario y la función **listenerGoogleAuth** se encuentra a la escucha del usuario resultante, si se concede el acceso, se guarda el objeto usuario recibido y se guarda de nuevo con la función **guardarDatosEnCookies**.
