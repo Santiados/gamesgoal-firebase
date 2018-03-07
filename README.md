@@ -1,7 +1,7 @@
 
 # Firebase
 
-**En vez de usar WebStorage se utilizado la propia base de datos de firebase para guardar la información de la base de datos**.
+**En vez de usar WebStorage se utilizado la propia base de datos de firebase para guardar la información de los usuarios**.
 
 ## Consola de Firebase
 
