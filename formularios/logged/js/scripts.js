@@ -1,3 +1,6 @@
+if(getCookie('usuarioTemporal')==null){
+  location.href='../index.html';
+}
 
 // Control de botones en el perfil
 
@@ -16,6 +19,7 @@
         console.log('Has cerrado sesion');
       }); 
     }
+
 
 
 window.onload = imprimirInformacionConCookies();  // Funcion ubicada en ControlFirebase.js

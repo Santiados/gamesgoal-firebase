@@ -25,10 +25,18 @@ function cargarControlInicio(){
     })
       .catch(function(e){
         console.log(e)
-        document.getElementsByClassName('modal-body')[0].innerHTML = '<p>Credenciales Incorrectas</p>';
+        document.getElementsByClassName('modal-body')[0].innerHTML = '<p>'+ errCodeLogin(e.code) +'</p>';
         $('[data-toggle=modal]').trigger('click');
       });
   });
+}
+
+function errCodeLogin(code){
+  if(code == 'auth/invalid-email'){
+    return 'No se ha introducido un email o esta mal formado';
+  } else{
+    return 'La contraseña es inválida';
+  }
 }
 
 
